@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#blobContainer {
+    height: 100vh;
+    background-color: #000;
+    /* Important to keep scrollbars not showing and contain blob element */
+    overflow: hidden;
+    position: relative; 
+}
+
+#blobBlur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+}
+
+/* #blob::before {
+    content: "";
+    filter: blur(200px);
+    position: absolute;
+} */
+
+#blob {
+    background: linear-gradient(
+        to right,
+        rgb(239, 216, 152),
+        rgb(97, 61, 14)
+    );
+    opacity: .65;
+    height: 750px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    translate: -50% -50%;
+    /* Can be set to square or circle depends on blur from backdrop-filter */
+    border-radius: 0%;
+    animation: rotate 20s infinite;
+    display: none;
+    /* filter: blur(200px); */
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    50% {
+        scale: 1 1.15;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
