@@ -1,0 +1,2 @@
+# Playground
+A small place to build out and test some code things focusing on HTML, CSS & JS. Most things will be small neat and fun snippets consisting of unique events or styles. Some animations will also be placed in this library. Trying to build up some small projects and use them to explore use cases for different user interactions and experiences. 
